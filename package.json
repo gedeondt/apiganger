@@ -1,0 +1,20 @@
+{
+  "name": "apiganger",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev --workspace backend",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev": "npm run dev:backend & npm run dev:frontend",
+    "build": "npm run build --workspaces",
+    "test": "npm test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "typecheck": "npm run typecheck --workspaces"
+  },
+  "engines": {
+    "node": ">=18.18"
+  }
+}
